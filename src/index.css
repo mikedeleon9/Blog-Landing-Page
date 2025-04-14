@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-
+*{
+  
+}
 
 .header-div{
   background: 
@@ -10,5 +12,6 @@
   background-position: 25% 50% ;
   border-bottom-left-radius: 5rem;
   background-size: auto;
+ 
 }
 
