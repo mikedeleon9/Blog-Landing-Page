@@ -1,7 +1,17 @@
 @import "tailwindcss";
 
+@theme{
+  --color-customRed : hsl(356, 100%, 66%);
+  --color-customWhite: hsl(0, 0%, 100%);
+  --color-hoverRed: hsl(355, 100%, 74%);
+}
+
 *{
-  
+  font-family: "Overpass", sans-serif;
+}
+
+body{
+ background: var(--color-customWhite);
 }
 
 .header-div{
@@ -15,3 +25,16 @@
  
 }
 
+.editorImage{
+  position: absolute;
+  top: 0;
+  right: -250px;
+}
+
+/* .design-div{
+  background: url("./images/illustration-editor-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  height: 100%;
+}
+*/
