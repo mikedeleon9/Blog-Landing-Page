@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+
+.header-div{
+  background: 
+  url('./images/bg-pattern-intro-desktop.svg'),
+  linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat;
+  background-position: 25% 50% ;
+  border-bottom-left-radius: 5rem;
+  background-size: auto;
+}
+
