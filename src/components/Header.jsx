@@ -7,7 +7,7 @@ export default function Header(){
     const headerItems = ["Product", "Company", "Connect"]
 
     return(
-        <div className=" header-div pb-32 mb-16 flex flex-col  gap-12">
+        <div className=" header-div pb-32 mb-16 flex flex-col  gap-12 ">
             <div className="flex items-center justify-between px-42 py-12">
 
           <header className="flex items-center gap-12">
