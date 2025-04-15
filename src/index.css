@@ -6,6 +6,8 @@
   --color-hoverRed: hsl(355, 100%, 74%);
   --color-darkBlue: hsl(208, 49%, 24%);
   --color-grayish: hsl(207, 13%, 34%);
+  --color-darkGrayBlue: hsl(237, 17%, 21%);
+  --color-desaturatedBlue: hsl(237, 23%, 32%);
 }
 
 *{
@@ -34,6 +36,29 @@ body{
   right: -250px;
 }
 
+.artComponent{
+ background: 
+ url('./images/bg-pattern-circles.svg') ,
+ linear-gradient(to right, var(--color-darkGrayBlue), var(--color-desaturatedBlue));
+ border-bottom-left-radius: 5rem;
+ background-repeat: no-repeat;
+ border-top-right-radius: 5rem;
+ background-position: -30% 85%;
+}
+
+.main-image{
+ 
+  position: absolute;
+  left: 50px;
+  top: -150px;
+}
+
+
+/* 
+- Very dark gray blue: hsl(237, 17%, 21%)
+- Very dark desaturated blue: hsl(237, 23%, 32%)
+
+*/
 
 
 /* .design-div{

@@ -2,9 +2,9 @@ import editorLogo from "../images/illustration-editor-desktop.svg";
 
 export default function DesignComponent(){
     return (
-        <div className=" min-h-screen relative flex flex-col mb-64">
+        <div className="  relative flex flex-col mb-78  ">
              <h2 className="text-center text-darkBlue font-semibold absolute top-24 w-full text-4xl z-10 ">Designed for the future</h2>
-            <div className="design-div  relative flex-col md:flex-row items-center md:items-start flex ">
+            <div className="design-div  relative flex-col md:flex-row items-center md:items-start flex gap-4">
                
                 <div className=" px-32 flex-1 flex flex-col  mt-58 gap-16 text-base/8">
                    <div>
@@ -19,7 +19,7 @@ export default function DesignComponent(){
 
                <div className=" flex-1">
                     <img className=" editorImage " src={editorLogo} alt="" />
-                </div>
+               </div>
             </div>
         </div>
     )
