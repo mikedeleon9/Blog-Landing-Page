@@ -4,6 +4,8 @@
   --color-customRed : hsl(356, 100%, 66%);
   --color-customWhite: hsl(0, 0%, 100%);
   --color-hoverRed: hsl(355, 100%, 74%);
+  --color-darkBlue: hsl(208, 49%, 24%);
+  --color-grayish: hsl(207, 13%, 34%);
 }
 
 *{
@@ -12,6 +14,7 @@
 
 body{
  background: var(--color-customWhite);
+ 
 }
 
 .header-div{
@@ -27,9 +30,11 @@ body{
 
 .editorImage{
   position: absolute;
-  top: 0;
+  top: 20;
   right: -250px;
 }
+
+
 
 /* .design-div{
   background: url("./images/illustration-editor-desktop.svg");
@@ -38,3 +43,4 @@ body{
   height: 100%;
 }
 */
+

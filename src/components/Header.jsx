@@ -7,11 +7,11 @@ export default function Header(){
     const headerItems = ["Product", "Company", "Connect"]
 
     return(
-        <div className="  header-div h-3/4 flex flex-col  gap-12">
-            <div className="flex items-center justify-between px-42 py-12 ">
+        <div className=" header-div pb-32 flex flex-col  gap-12">
+            <div className="flex items-center justify-between px-42 py-12">
 
           <header className="flex items-center gap-12">
-           <img src={mainLogo} alt="main-logo" />
+           <img className="" src={mainLogo} alt="main-logo" />
             <ul className="flex items-center gap-4 text-white ">
             {headerItems.map(item => {
                 return (
