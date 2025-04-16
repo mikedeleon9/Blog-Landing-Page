@@ -4,7 +4,8 @@ export default function DesignComponent(){
     return (
         <div className="  relative flex flex-col mb-78  ">
              <h2 className="text-center text-darkBlue font-semibold absolute top-24 w-full text-4xl z-10 ">Designed for the future</h2>
-            <div className="design-div  relative flex-col md:flex-row items-center md:items-start flex gap-4">
+
+            <div className="design-div  relative flex-col-reverse lg:flex-row items-center md:items-start flex gap-4 ">
                
                 <div className=" px-32 flex-1 flex flex-col  mt-58 gap-16 text-base/8">
                    <div>
@@ -17,8 +18,8 @@ export default function DesignComponent(){
                     </div>
                 </div>
 
-               <div className=" flex-1">
-                    <img className=" editorImage " src={editorLogo} alt="" />
+               <div className=" flex-1 ">
+                    <img className=" editorImage static lg:absolute h-96 lg:h-auto" src={editorLogo} alt="" />
                </div>
             </div>
         </div>
