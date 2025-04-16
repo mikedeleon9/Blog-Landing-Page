@@ -2,7 +2,7 @@ import laptopImage from "../images/illustration-laptop-desktop.svg"
 
 export default function LaptopComponent(){
     return(
-        <div className="flex  ">
+        <div className="flex  mb-52">
             <div className="flex-1">
                 <img className="laptop-image " src={laptopImage} alt="laptop image" />
             </div>

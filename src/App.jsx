@@ -3,6 +3,7 @@ import Header from './components/Header'
 import DesignComponent from './components/DesignComponent'
 import ArtComponent from './components/ArtComponent'
 import LaptopComponent from './components/LaptopComponent'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <DesignComponent />
     <ArtComponent />
     <LaptopComponent />
+    <Footer />
     </div>
   )
 }

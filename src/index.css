@@ -58,8 +58,9 @@ body{
   top: -150px;
 }
 
-.footerBG{
+.footerBG {
   background: hsl(240, 10%, 16%);
+  border-top-right-radius: 5rem;
 }
 
 /* 
