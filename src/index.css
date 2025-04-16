@@ -58,6 +58,9 @@ body{
   top: -150px;
 }
 
+.footerBG{
+  background: hsl(240, 10%, 16%);
+}
 
 /* 
 - Very dark gray blue: hsl(237, 17%, 21%)
