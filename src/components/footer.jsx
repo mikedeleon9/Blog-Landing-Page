@@ -19,7 +19,7 @@ export default function Footer(){
                 <p className="mb-8">{heading}</p>
                <ul className="text-white flex flex-col gap-3">
                     {categories[i].map((item) => (
-                        <li className="text-white">{item}</li>
+                        <li key={item} className="text-white">{item}</li>
                     ))}
                </ul>
             </div>
