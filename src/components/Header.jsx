@@ -46,7 +46,7 @@ export default function Header(){
                         <div className={`${openIndex === index  ? 'block' : 'hidden'}  bg-white text-black absolute top-8 px-4 w-32 py-4 rounded-md font-light flex flex-col items-start gap-1`}>
                             {dropDownItems[index].map((dropdownItem, i) => (
                                
-                                    <p key={i}>{dropdownItem}</p>
+                                    <p className="cursor-pointer hover:font-semibold" key={i}>{dropdownItem}</p>
                                 
                             ))}
                         </div>
