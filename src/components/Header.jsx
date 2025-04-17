@@ -1,6 +1,6 @@
 import arrowIcon from "../images/icon-arrow-light.svg"
 import mainLogo from "../images/logo.svg"
-
+import hamburgerMenu from "../images/icon-hamburger.svg"
 
 
 export default function Header(){
@@ -15,7 +15,7 @@ export default function Header(){
             <ul className="flex items-center gap-4 text-white ">
             {headerItems.map(item => {
                 return (
-                    <div className="flex items-center gap-2 ">
+                    <div className="lg:flex items-center gap-2 hidden">
                         <li className="">{item}</li>
                         <img src={arrowIcon} />
                     </div>
@@ -24,7 +24,8 @@ export default function Header(){
             </ul>
             
           </header>
-          <div className="flex items-center text-white gap-8">
+          <img className="opacity-100 xl:opacity-0" src={hamburgerMenu} alt="" />
+          <div className="hidden xl:flex items-center text-white gap-8">
             <p className="cursor-pointer">Login</p>
             <button className="px-6 py-2 rounded-full bg-white text-customRed font-bold cursor-pointer hover:text-white hover:bg-hoverRed">Sign Up</button>
           </div>
