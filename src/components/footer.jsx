@@ -10,7 +10,7 @@ const categories = [
 
 export default function Footer(){
     return (
-        <div className="footerBG h-92 flex items-start py-22  justify-evenly px-16">
+        <div className="footerBG lg:h-92 flex flex-col md:flex-row items-start py-22  justify-evenly px-16">
             <img src={mainLogo} alt="Main logo" />
            
            {headings.map((heading, i) => (

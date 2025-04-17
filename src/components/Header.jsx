@@ -4,7 +4,14 @@ import hamburgerMenu from "../images/icon-hamburger.svg"
 
 
 export default function Header(){
-    const headerItems = ["Product", "Company", "Connect"]
+    const headerItems = ["Product", "Company", "Connect"];
+
+    const dropDownItems = [
+        ["Overview", "Pricing", "Marketplace", "Features", "Integrations"],
+        ["About", "Team", "Blog", "Careers"],
+        ["Contact", "Newsletter", "LinkedIn"]
+    ];
+ 
 
     return(
         <div className=" header-div pb-32 mb-16 flex flex-col  gap-12 ">
@@ -12,12 +19,19 @@ export default function Header(){
 
           <header className="flex items-center gap-12">
            <img className="" src={mainLogo} alt="main-logo" />
-            <ul className="flex items-center gap-4 text-white ">
-            {headerItems.map(item => {
+            <ul className="flex items-center gap-22 text-white ">
+            {headerItems.map((item, index) => {
                 return (
-                    <div className="hidden lg:flex items-center gap-2 hidden">
-                        <li className="">{item}</li>
+                    <div key={item} className="hidden lg:flex items-center gap-2 hidden relative">
+                        <li className="cursor-pointer hover:underline hover:decoration-2">{item}</li>
                         <img src={arrowIcon} />
+                        <div className="hidden bg-white text-black absolute top-8 px-4 w-32 py-4 rounded-md font-light flex flex-col items-start gap-1">
+                            {dropDownItems[index].map((dropdownItem, i) => (
+                               
+                                    <p>{dropdownItem}</p>
+                                
+                            ))}
+                        </div>
                     </div>
                 )
             })}
