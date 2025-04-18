@@ -2,10 +2,12 @@ import arrowIcon from "../images/icon-arrow-light.svg"
 import mainLogo from "../images/logo.svg"
 import hamburgerMenu from "../images/icon-hamburger.svg"
 import {useState, useEffect, useRef} from "react"
+import DropDownMenu from "../components/DropDownMenu"
 
 export default function Header(){
     const [openIndex, setOpenIndex] = useState(false);
     const dropdownRef = useRef(null);
+    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
     const headerItems = ["Product", "Company", "Connect"];
     const dropDownItems = [
@@ -16,6 +18,10 @@ export default function Header(){
 
     function toggleDropDown(index){
         setOpenIndex(prev => prev === index ? null : index)
+    }
+
+    function showBurgerMenu(){
+        setShowHamburgerMenu(prev => !prev);
     }
  
     useEffect(() => {
@@ -31,9 +37,11 @@ export default function Header(){
         };
     }, []);
 
+
+
     return(
         <div className=" header-div pb-32 mb-16 flex flex-col  gap-12 ">
-            <div className="flex items-center justify-between px-12 md:px-42 py-12">
+            <div className="flex items-center justify-between px-12 lg:px-42 py-12">
 
           <header className="flex items-center gap-12" ref={dropdownRef}>
            <img className="" src={mainLogo} alt="main-logo" />
@@ -42,7 +50,7 @@ export default function Header(){
                 return (
                     <div onClick={() => toggleDropDown(index)} key={item} className="hidden lg:flex items-center gap-2 relative">
                         <li  className="cursor-pointer hover:underline hover:decoration-2 ">{item}</li>
-                        <img src={arrowIcon} />
+                        <img className={`transition-transform duration-300  ${openIndex === index ? 'rotate-180' : 'rotate-0'}`} src={arrowIcon} />
                         <div className={`${openIndex === index  ? 'block' : 'hidden'}  bg-white text-black absolute top-8 px-4 w-32 py-4 rounded-md font-light flex flex-col items-start gap-1`}>
                             {dropDownItems[index].map((dropdownItem, i) => (
                                
@@ -56,7 +64,9 @@ export default function Header(){
             </ul>
             
           </header>
-          <img className="opacity-100 xl:opacity-0" src={hamburgerMenu} alt="" />
+          <img onClick={showBurgerMenu} className="opacity-100 xl:opacity-0 relative" src={hamburgerMenu} alt="" />
+            <DropDownMenu />
+          
           <div className="hidden xl:flex items-center text-white gap-8">
             <p className="cursor-pointer">Login</p>
             <button className="px-6 py-2 rounded-full bg-white text-customRed font-bold cursor-pointer hover:text-white hover:bg-hoverRed">Sign Up</button>
