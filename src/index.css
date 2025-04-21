@@ -8,6 +8,7 @@
   --color-grayish: hsl(207, 13%, 34%);
   --color-darkGrayBlue: hsl(237, 17%, 21%);
   --color-desaturatedBlue: hsl(237, 23%, 32%);
+  --color-darkGrayish: hsl(207, 13%, 34%);
 }
 
 *{
