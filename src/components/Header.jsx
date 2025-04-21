@@ -42,7 +42,16 @@ export default function Header(){
         };
     }, []);
 
-
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth >= 1024) {
+            setShowHamburgerMenu(false); // Hide mobile menu on large screens
+          }
+        };
+      
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
 
     return(
         <div className=" header-div pb-32 mb-16 flex flex-col  gap-12 ">

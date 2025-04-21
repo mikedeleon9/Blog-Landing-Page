@@ -19,7 +19,7 @@ export default function DropDownMenu({showHamburgerMenu}){
 
 
     return (
-        <div className={`${showHamburgerMenu ? "block" : "hidden" }  bg-white py-4  absolute right-15 rounded-md top-25 shadow-lg`}>
+        <div className={`${showHamburgerMenu ? "block" : "hidden" }  bg-white py-4 lg:hidden absolute right-15 rounded-md top-25 shadow-lg`}>
             <ul className="flex w-48 flex-col gap-2 px-4 mb-4">
                 {headerItems.map((item, index) => (
                     <div className="flex flex-col items-center gap-1">
