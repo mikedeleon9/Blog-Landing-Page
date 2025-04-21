@@ -60,13 +60,13 @@ export default function Header(){
 
           <header className="flex items-center gap-12" ref={dropdownRef}>
            <img className="" src={mainLogo} alt="main-logo" />
-            <ul className="flex items-center gap-22 text-white ">
+            <ul className="flex items-center gap-10 text-white">
             {headerItems.map((item, index) => {
                 return (
-                    <div onClick={() => toggleDropDown(index)} key={item} className="hidden lg:flex items-center gap-2 relative">
+                    <div onClick={() => toggleDropDown(index)} key={item} className="hidden lg:flex items-center gap-2 relative shadow-lg">
                         <li  className="cursor-pointer hover:underline hover:decoration-2 ">{item}</li>
                         <img className={`transition-transform duration-300  ${openIndex === index ? 'rotate-180' : 'rotate-0'}`} src={arrowIcon} />
-                        <div className={`${openIndex === index  ? 'block' : 'hidden'}  bg-white text-black absolute top-8 px-4 w-32 py-4 rounded-md font-light flex flex-col items-start gap-1`}>
+                        <div className={`${openIndex === index  ? 'block' : 'hidden'}  bg-white text-black absolute top-8 px-4 w-32 py-4 rounded-md font-light flex flex-col items-start gap-1 shadow-lg`}>
                             {dropDownItems[index].map((dropdownItem, i) => (
                                
                                     <p className="cursor-pointer hover:font-semibold" key={i}>{dropdownItem}</p>
