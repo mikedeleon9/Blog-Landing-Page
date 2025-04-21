@@ -8,7 +8,6 @@
   --color-grayish: hsl(207, 13%, 34%);
   --color-darkGrayBlue: hsl(237, 17%, 21%);
   --color-desaturatedBlue: hsl(237, 23%, 32%);
-  --color-darkGrayish: hsl(207, 13%, 34%);
 }
 
 *{
@@ -51,11 +50,9 @@ body{
  background-position: -30% 85%;
 }
 
-.main-image{
- 
-  
-  
-  
+.signUpButton{
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%) );
+
 }
 
 .footerBG {

@@ -1,5 +1,6 @@
 import arrowIcon from "../images/icon-arrow-light.svg"
 import mainLogo from "../images/logo.svg"
+import closeIcon from "../images/icon-close.svg"
 import hamburgerMenu from "../images/icon-hamburger.svg"
 import {useState, useEffect, useRef} from "react"
 import DropDownMenu from "../components/DropDownMenu"
@@ -8,6 +9,7 @@ export default function Header(){
     const [openIndex, setOpenIndex] = useState(false);
     const dropdownRef = useRef(null);
     const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+   
 
     const headerItems = ["Product", "Company", "Connect"];
     const dropDownItems = [
@@ -22,7 +24,10 @@ export default function Header(){
 
     function showBurgerMenu(){
         setShowHamburgerMenu(prev => !prev);
+
     }
+
+
  
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -64,8 +69,8 @@ export default function Header(){
             </ul>
             
           </header>
-          <img onClick={showBurgerMenu} className="opacity-100 xl:opacity-0 relative" src={hamburgerMenu} alt="" />
-            <DropDownMenu />
+          <img onClick={showBurgerMenu} className="opacity-100 xl:opacity-0 relative cursor-pointer" src={showHamburgerMenu ? closeIcon : hamburgerMenu } alt="" />
+            <DropDownMenu showHamburgerMenu={showHamburgerMenu} />
           
           <div className="hidden xl:flex items-center text-white gap-8">
             <p className="cursor-pointer">Login</p>
