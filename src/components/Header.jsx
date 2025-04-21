@@ -46,6 +46,7 @@ export default function Header(){
         const handleResize = () => {
           if (window.innerWidth >= 1024) {
             setShowHamburgerMenu(false); // Hide mobile menu on large screens
+            setOpenIndex(false)
           }
         };
       
@@ -78,10 +79,10 @@ export default function Header(){
             </ul>
             
           </header>
-          <img onClick={showBurgerMenu} className="opacity-100 xl:opacity-0 relative cursor-pointer" src={showHamburgerMenu ? closeIcon : hamburgerMenu } alt="" />
+          <img onClick={showBurgerMenu} className="opacity-100 lg:opacity-0 relative cursor-pointer" src={showHamburgerMenu ? closeIcon : hamburgerMenu } alt="" />
             <DropDownMenu showHamburgerMenu={showHamburgerMenu} />
           
-          <div className="hidden xl:flex items-center text-white gap-8">
+          <div className="hidden lg:flex items-center text-white gap-8">
             <p className="cursor-pointer">Login</p>
             <button className="px-6 py-2 rounded-full bg-white text-customRed font-bold cursor-pointer hover:text-white hover:bg-hoverRed">Sign Up</button>
           </div>
